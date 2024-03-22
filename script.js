@@ -3,10 +3,25 @@ document.getElementById("scrollButton").addEventListener("click", function () {
   element.scrollIntoView({ behavior: "smooth" });
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  var hireMeButton = document.getElementById("scrollButton23");
+var contactInfoModal = document.getElementById("contactInfoModal");
+var closeBtn = document.getElementsByClassName("close")[0];
 
-  hireMeButton.addEventListener("click", function () {
-    window.location.href = "https://www.topcv.vn/xem-cv/W1IKAwJQDgMGCgQCUAFUVlVXBVZTCQRRVFJUBgc890";
-  });
-});
+document.getElementById("scrollButton23").onclick = function() {
+  contactInfoModal.style.display = "block";
+  contactInfoModal.classList.add("fade-in"); 
+};
+
+
+closeBtn.onclick = function() {
+  contactInfoModal.style.display = "none";
+  contactInfoModal.classList.remove("fade-in"); 
+};
+
+
+window.onclick = function(event) {
+  if (event.target == contactInfoModal) {
+    contactInfoModal.style.display = "none";
+    contactInfoModal.classList.remove("fade-in"); 
+  }
+};
+
