@@ -12,17 +12,18 @@ nav {
 
 .post {
   display: flex;
+  margin-block: 200px;
 }
 
 .post-picture {
   max-width: 500px;
   max-height: 500px;
   border-radius: 5px;
-  margin-right: 200px;
+ 
 }
 
 .post-content {
-  margin-left: 200px;
+  
 }
 
 #post p {
@@ -155,23 +156,49 @@ nav {
 
 .about-me {
   display: flex;
+  margin-block: 200px;
 }
 
 .my-picture {
   max-width: 500px;
   max-height: 500px;
   border-radius: 5px;
-  margin-left: 200px;
+
 }
 .more-i4 {
   margin-left: 100px;
-  margin-right: 200px;
 }
 
 .services-container {
   display: flex;
   justify-content: space-between;
   padding: 20px;
+}
+@media only screen and (max-width: 768px) {
+  .services-container {
+    flex-direction: column;
+    justify-content: start;
+  }
+  .service-box {
+    width: 300px !important;
+    padding: 0;
+    margin-block: auto;
+  }
+  .my-picture {
+    max-width: 150px;
+    max-height: 150px; 
+  }
+  .post-picture {
+    max-width: 150px;
+    max-height: 150px;
+
+  }
+  .post {
+    margin-left: 0;
+  }
+  .more-i4{
+    margin-left: 0;
+  }
 }
 .service-box {
   border: 2px solid black;
@@ -209,11 +236,11 @@ p {
 .contact-form {
   display: flex;
   flex-direction: column;
-  width: 400px; 
+  width: 400px;
   margin-left: 200px;
-  padding: 20px; 
-  background-color: white; 
-  border-radius: 10px; 
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
 }
 
